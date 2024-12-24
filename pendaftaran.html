@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran SMA Pelita Harapan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        .container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .container input, .container select, .container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pendaftaran SMA Pelita Harapan</h1>
+        <form method="POST" action="pendaftaran.php">
+            <!-- Personal Information -->
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+
+            <label for="phone">Nomor Telepon</label>
+            <input type="text" id="phone" name="phone" placeholder="Masukkan nomor telepon" required>
+
+            <label for="address">Alamat</label>
+            <textarea id="address" name="address" placeholder="Masukkan alamat lengkap" rows="4" required></textarea>
+
+            <!-- Class Selection -->
+            <label for="class">Pilih Kelas</label>
+            <select id="class" name="class" required>
+                <option value="">-- Pilih Kelas --</option>
+                <option value="reguler">Kelas Reguler</option>
+                <option value="internasional">Kelas Internasional</option>
+            </select>
+
+            <!-- Payment Details -->
+            <h2>Rincian Pembayaran</h2>
+            <p><strong>Kelas Reguler:</strong> Rp 15,000,000 per tahun</p>
+            <p><strong>Kelas Internasional:</strong> Rp 30,000,000 per tahun</p>
+
+            <label for="payment_method">Metode Pembayaran</label>
+            <select id="payment_method" name="payment_method" required>
+                <option value="">-- Pilih Metode Pembayaran --</option>
+                <option value="transfer">Transfer Bank</option>
+                <option value="cash">Tunai</option>
+            </select>
+
+            <label for="notes">Catatan Tambahan (Opsional)</label>
+            <textarea id="notes" name="notes" placeholder="Masukkan catatan tambahan" rows="3"></textarea>
+
+            <button type="submit">Daftar</button>
+        </form>
+    </div>
+</body>
+</html>

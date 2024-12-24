@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Harian</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Container utama */
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Form Styling */
+        form {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        select {
+            padding: 10px;
+            font-size: 14px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group select {
+            width: 50%;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 30px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        td {
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Absensi Harian</h1>
+        
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="student-name">Nama Siswa:</label>
+                <input type="text" id="student-name" name="student-name" required placeholder="Masukkan nama siswa">
+            </div>
+            
+            <div class="form-group">
+                <label for="attendance-date">Tanggal:</label>
+                <input type="date" id="attendance-date" name="attendance-date" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="attendance-status">Status Kehadiran:</label>
+                <select id="attendance-status" name="attendance-status" required>
+                    <option value="Hadir">Hadir</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Alpha">Alpha</option>
+                </select>
+            </div>
+            
+            <button type="submit">Kirim Absensi</button>
+        </form>
+
+        <h2>Daftar Absensi</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Nama Siswa</th>
+                    <th>Tanggal</th>
+                    <th>Status Kehadiran</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data Absensi akan ditampilkan di sini -->
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>2024-12-14</td>
+                    <td>Hadir</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>2024-12-14</td>
+                    <td>Sakit</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

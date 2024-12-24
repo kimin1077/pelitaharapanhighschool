@@ -1,0 +1,193 @@
+<html>
+    <head>
+        <meta charset="utf-8" /> 
+        <link rel="icon" href="PUBLIC_URL/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <Title>pelitaharapan.sch.id</Title>
+        <link rel="stylesheet" href="style.css"/>
+        <meta charset="utf-8">
+        <link rel="icon" href="icon/logo.png" sizes="32x32">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fon..." integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </head>
+    <body>
+        <header>
+           <div class="logo">
+                <main>
+                  <h1 class="logo"></h1>
+                     <img src="icon/Logo.png" alt="Logo SMA Pelita Mutiara" class="logo-img"> 
+                     </div>
+                    </div>
+                </main>
+                
+            <nav>
+                <ul>
+                    <li><a href="indek.html"> HOME</a></li>
+                    <li><a href="contact.html"> CONTACT</a></li>
+                    <div class="subnav">
+                    <button class="subnavbtn">LAYANAN <i class="fa fa-caret-down"></i></button>
+                    <div class="subnav-content">
+                    <a href="https://drive.google.com/file/d/1pECGSiF-CJXBW_Y_fDdKIfRXzrzh8rfy/view?usp=drive_link"> KALENDER</a>
+                    <a href="absen.html"> ABSENSI</a>
+                    <a href="eperpus.html"> E-Library</a>
+                    <a href="elearn.html"> E-Learning</a>
+                    <a href="pendaftaran.html"> PENDAFTARAN</a>
+                    <a href="daful.html"> Daftar Ulang</a>
+                    </div>
+                    
+                </ul>
+            </nav>
+            
+              </div>
+             <a href="https://www.instagram.com/edumenta_23?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+            <button class="btn-cta">Follow Me</button>
+           </a>
+        </header>
+        
+       
+            </div>
+        </div>
+        <div class="paralax">
+                    <video autoplay muted loop id="myVideo">
+                      <source src="icon/profile.mp4" type="video/mp4">
+                      Your browser does not support HTML5 video.
+                    </video>
+                    
+                    <div class="content">
+                      <h1>Our Profile</h1>
+                      <p>Pelita Harapan High School is a senior high school committed to providing quality education with a holistic approach based on national values. The school aims to create a learning environment that is inspiring, conducive, and supportive of students' academic, character, and skill development. Through an international-based curriculum combined with local values, SMA Pelita Harapan strives to produce graduates who are intellectually superior, have high integrity, and have social and spiritual sensitivity.</p>
+                      <button id="myBtn" onclick="myFunction()">Pause</button>
+                    </div>
+                    
+                    <script>
+                    var video = document.getElementById("myVideo");
+                    var btn = document.getElementById("myBtn");
+                    
+                    function myFunction() {
+                      if (video.paused) {
+                        video.play();
+                        btn.innerHTML = "Pause";
+                      } else {
+                        video.pause();
+                        btn.innerHTML = "Play";
+                      }
+                    }
+                    </script>
+            </div> 
+            <div class="container">
+            <div class="intro">
+                <p class="tittle">Welcome to Our Website</p>
+                <p class="description">International school at Indonesia</p>
+                <body>
+
+                    <div class="slideshow-container">
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 3</div>
+                      <img src="icon/sekolah.jpeg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="icon/perpus.jpeg" style="width:100%">
+                      </div>
+                    
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 3</div>
+                      <img src="icon/kelas.jpeg" style="width:100%">
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                    
+                    </div>
+                    <br>
+                    
+                    <div style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                      <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                    
+                    <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+                    
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                    
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+                    
+                    function showSlides(n) {
+                      let i;
+                      let slides = document.getElementsByClassName("mySlides");
+                      let dots = document.getElementsByClassName("dot");
+                      if (n > slides.length) {slideIndex = 1}    
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";  
+                      dots[slideIndex-1].className += " active";
+                    }
+                    </script>
+                    
+                    </body>
+                <body>
+                    <div class="main-container">
+                    <div class="left-column">
+                        <ol><strong>VISI:</strong> <p>Menjadi SMA berprestasi yang menghasilkan generasi unggul, berkarakter mulia, dan peduli terhadap lingkungan serta kemanusiaan </p></ol>
+                            
+                        <ol><strong>MISI:</strong></ol>
+                            <li>Meningkatkan prestasi akademik siswa melalui program pembelajaran yang inovatif, kompetitif, dan berorientasi pada pencapaian standar nasional serta internasional.</li>
+                            <li>Membentuk karakter siswa yang berintegritas
+                            dan bertanggung jawab dengan
+                            mengintegrasikan nilai-nilai moral dan etika
+                            dalam setiap aspek kegiatan belajar dan
+                            kegiatan ekstrakurikuler.</li>
+                            <li>Membangun kesadaran lingkungan dan
+                            tanggung jawab sosial melalui program
+                            kegiatan berbasis ekosistem, seperti
+                            penghijauan, pengelolaan sampah, serta
+                            kegiatan bakti sosial yang melibatkan siswa
+                            dan masyarakat.</li>
+                            <li>Mengembangkan keterampilan abad 21 seperti
+                            kemampuan berpikir kritis, komunikasi,
+                            kolaborasi, dan kreativitas melalui
+                            pembelajaran berbasis proyek serta pelatihan
+                            keterampilan praktis.</li>
+                            <li>Menjalin kemitraan dengan berbagai lembaga
+                            pendidikan, dunia usaha, dan organisasi sosial
+                            untuk memberikan kesempatan magang,
+                            bimbingan karier, dan wawasan dunia kerja
+                            bagi siswa.</li>
+                    </div>
+            
+                    <!-- Kolom Kanan: Layanan yang Diberikan -->
+                    <div class="right-column">
+                        <h2>Layanan Kami</h2>
+                        <ul>
+                            <li><strong>Pendidikan Berkualitas:</strong> Program akademik yang dirancang untuk mempersiapkan siswa menghadapi tantangan global.</li>
+                            <li><strong>Pelatihan Kepemimpinan:</strong> Mengembangkan kemampuan kepemimpinan dan karakter melalui program khusus seperti retret, seminar, dan proyek sosial.</li>
+                            <li><strong>Kegiatan Ekstrakurikuler:</strong> Berbagai kegiatan seperti olahraga, seni, musik, klub, dan organisasi siswa yang mendukung pengembangan kreativitas.</li>
+                            <li><strong>Program Bimbingan Karier:</strong> Membantu siswa merencanakan jalur karier mereka melalui bimbingan dan pengalaman magang.</li>
+                            <li><strong>Fasilitas Modern:</strong> Laboratorium, ruang seni, lapangan olahraga, dan ruang kelas yang dilengkapi teknologi terbaru.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                </body>
+        </div>
+        <footer>
+          <h3>Growth our Mind, <span>With our Brain</span></h3>
+          <p>Empowering learning, shaping the future.</p>
+      </footer>
+    </body>
+</html>

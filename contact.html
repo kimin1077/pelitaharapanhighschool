@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Kontak</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .message {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .success {
+            color: #4CAF50;
+        }
+        .error {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Form Kontak</h1>
+
+        <!-- Tampilkan pesan sukses atau error -->
+        <?php if ($successMessage): ?>
+            <div class="message success"><?php echo $successMessage; ?></div>
+        <?php endif; ?>
+        <?php if ($errorMessage): ?>
+            <div class="message error"><?php echo $errorMessage; ?></div>
+        <?php endif; ?>
+
+        <!-- Formulir Kontak -->
+        <form action="" method="POST">
+            <label for="name">Nama Lengkap:</label>
+            <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Masukkan email Anda">
+
+            <label for="subject">Subjek:</label>
+            <input type="text" id="subject" name="subject" placeholder="Masukkan subjek (optional)">
+
+            <label for="message">Pesan:</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Masukkan pesan Anda"></textarea>
+
+            <button type="submit">Kirim Pesan</button>
+        </form>
+    </div>
+
+</body>
+</html>

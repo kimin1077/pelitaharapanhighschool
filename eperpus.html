@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Perpus SMA Pelita Harapan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .search-bar input {
+            flex: 1;
+            max-width: 600px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-bar button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #45a049;
+        }
+
+        .book-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .book {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .book img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .book h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .book p {
+            font-size: 14px;
+            color: #555;
+        }
+        .book button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .book button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 600px) {
+            .search-bar {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>E-Perpus SMA Pelita Harapan</h1>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Cari buku...">
+            <button onclick="searchBook()">Cari</button>
+        </div>
+        <h2>Koleksi Buku Terbaru</h2>
+        <div class="book-list">
+            <div class="book">
+                <img src="icon/book1.jpeg" alt="Book 1">
+                <h3>Cantik itu Luka</h3>
+                <p>Penulis: Eka Kurniawan</p>
+                <button>Pinjam Buku</button>
+            </div>
+            <div class="book">
+                <img src="icon/book2.jpeg" alt="Book 2">
+                <h3>Catatan Pembunuhan Sang Novelis (Malice)</h3>
+                <p>Penulis: Keigo Higashino</p>
+                <button>Pinjam Buku</button>
+            </div>
+            <div class="book">
+                <img src="icon/book3.jpeg" alt="Book 3">
+                <h3>Keajaiban Toko Kelontong Namiya</h3>
+                <p>Penulis: Keigo Higashino</p>
+                <button>Pinjam Buku</button>
+            </div>
+            <div class="book">
+                <img src="icon/book4.jpeg" alt="Book 4">
+                <h3>Laut Bercerita</h3>
+                <p>Penulis: Leila Salikha Chudori</p>
+                <button>Pinjam Buku</button>
+            </div>
+            <div class="book">
+                <img src="icon/book5.jpeg" alt="Book 5">
+                <h3>Bedebah di Ujung Tanduk</h3>
+                <p>Penulis: Tere Liye</p>
+                <button>Pinjam Buku</button>
+            </div>
+            <div class="book">
+                <img src="icon/book6.jpeg" alt="Book 6">
+                <h3>Rembulan Tenggelam di Wajahmu</h3>
+                <p>Penulis: Tere Liye</p>
+                <button>Pinjam Buku</button>
+            </div>
+            <div class="book">
+                <img src="icon/book10.jpeg" alt="Book 10">
+                <h3>Manusia dan Badainya</h3>
+                <p>Penulis: Syahid Muhammad</p>
+                <button>Pinjam Buku</button>
+            </div> <div class="book">
+                <img src="icon/book11.jpeg" alt="Book 11">
+                <h3>Serangkai</h3>
+                <p>Penulis: Valerie Patkar</p>
+                <button>Pinjam Buku</button>
+            </div>
+             <!-- Hidden Books -->
+             <div class="book" data-hidden="true" style="display: none;">
+                <img src="icon/book7.jpeg" alt="Book 7">
+                <h3>The Alpha Girl’s Guide</h3>
+                <p>Penulis: Henry Manampiring</p>
+                <button>Pinjam Buku</button>
+            </div>
+            <div class="book" data-hidden="true" style="display: none;">
+                <img src="icon/book8.jpeg" alt="Book 8">
+                <h3>Gadis Kretek</h3>
+                <p>Penulis: Ratih Kumala</p>
+                <button>Pinjam Buku</button>
+            </div>
+            <div class="book" data-hidden="true" style="display: none;">
+                <img src="icon/book9.jpeg" alt="Book 9">
+                <h3>How High The Moon</h3>
+                <p>Penulis: Karyn Parsons</p>
+                <button>Pinjam Buku</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function searchBook() {
+            const searchInput = document.getElementById('search').value.toLowerCase();
+            const books = document.querySelectorAll('.book');
+
+            books.forEach(book => {
+                const title = book.querySelector('h3').textContent.toLowerCase();
+                if (title.includes(searchInput)) {
+                    book.style.display = 'block';
+                } else {
+                    book.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
